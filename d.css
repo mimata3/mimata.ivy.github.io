@@ -1,0 +1,153 @@
+body {
+  margin: 0;
+  font-family: 'Bebas Neue', sans-serif;
+  background-color: #141414;
+  color: white;
+}
+
+/* ヘッダー */
+.login-header {
+  padding: 20px;
+  text-align: center;
+}
+
+.logo {
+  color: #e50914;
+  font-size: 32px;
+  text-decoration: none;
+}
+
+/* ログインボックス */
+.login-box {
+  background-color: rgba(0, 0, 0, 0.75);
+  max-width: 350px;
+  margin: 40px auto;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+  text-align: center;
+}
+
+.login-box h1 {
+  margin-bottom: 30px;
+  font-size: 24px;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 16px;
+  background: #333;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 14px;
+}
+
+.login-box button {
+  width: 100%;
+  padding: 14px;
+  background-color: #e50914;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.login-box button:hover {
+  background-color: #b00610;
+}
+
+/* オプション（チェックボックス・リンク） */
+.options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.options label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 0.9em;
+  white-space: normal;
+  line-height: 1.3;
+}
+
+.options label input[type="checkbox"] {
+  margin: 0;
+  width: 16px;
+  height: 16px;
+}
+
+.options a {
+  font-size: 0.9em;
+  text-decoration: underline;
+  cursor: pointer;
+  color: white;
+}
+
+.options a:hover {
+  color: #e50914;
+}
+
+/* サインアップリンク */
+.signup-box {
+  margin-top: 30px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.signup-box a {
+  color: white;
+  text-decoration: underline;
+}
+
+.signup-box a:hover {
+  color: #e50914;
+}
+
+/* フッター */
+.login-footer {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 12px;
+  color: #888;
+}
+
+@media screen and (max-width: 600px) {
+  .login-box {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .login-box h1 {
+    font-size: 20px;
+  }
+
+  .login-box input,
+  .login-box button {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .options {
+    font-size: 0.85em;
+    gap: 6px;
+  }
+
+  .signup-box {
+    font-size: 13px;
+  }
+
+  .logo {
+    font-size: 26px;
+  }
+}
