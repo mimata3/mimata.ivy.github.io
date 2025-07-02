@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MYFLIX </title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+
+
+  <header class="site-header">
+    <span class="netflix-logo">MYFLIX</span>
+    <span class="header-subtitle">～おすすめお笑い番組のご紹介～</span>
+    <a class="login-button" href="index (1).html">ログイン</a>
+  </header>
+
+  <!-- ヒーローセクション -->
+  <section class="hero">
+    <div class="video-box">
+      <video class="hero-video" autoplay muted loop playsinline id="heroVideo">
+        <source src="talk.mp4" type="video/mp4" id="videoSource" />
+      </video>
+    </div>
+
+    <div class="hero-content">
+      <h1 class="title" id="heroTitle">トークサバイバー</h1>
+      <p class="meta" id="heroMeta">2024年・バラエティ・PG12
+
+      </p>
+    </div>
+
+    <div class="video-controls">
+      <button id="playPauseBtn" aria-label="再生/一時停止">⏸</button>
+      <button id="muteBtn" aria-label="ミュート切替">🔈</button>
+    </div>
+  </section>
+
+  <!-- あらすじ -->
+  <section class="description">
+    <h2>あらすじ</h2>
+    <p id="heroDescription">
+      人気芸人たちが即興トークで勝ち残りを目指すバラエティ番組。<br>お題は当日まで秘密で、台本なしだからこそ見られる“素のトーク力”が魅力です。時には冷や汗をかきながらも懸命に笑いを取りにいく姿がたまりません。<br>緊張感あふれるトークバトルの中で、思わぬ爆笑シーンが続出！個人的に超おすすめです。
+    </p>
+  </section>
+
+  <!-- 出演者 -->
+  <section class="cast">
+    <h2>出演者</h2>
+    <p id="heroCast">千鳥／劇団ひとり／おぎやはぎ／チャンス大城／永野／津田篤宏（ダイアン）／野田クリスタル（マヂカルラブリー）／野呂佳代 他</p>
+  </section>
+
+  <!-- おすすめ -->
+  <section class="more">
+    <h2>その他作品</h2>
+    <div class="scrolling-row">
+      <div class="card" data-key="talk" data-title="トークサバイバー">
+        <img src="talk.jpg" alt="トークサバイバー" />
+        <p>トークサバイバー</p>
+      </div>
+      <div class="card" data-key="golden" data-title="ゴールデンコンビ">
+        <img src="goldencombi_kv.webp" alt="ゴールデンコンビ" />
+        <p>ゴールデンコンビ</p>
+      </div>
+      <div class="card" data-key="ariyoshi" data-title="有吉の壁">
+        <img src="ariyosi1.jpg" alt="有吉の壁" />
+        <p>有吉の壁</p>
+      </div>
+      <div class="card" data-key="batoumura" data-title="罵倒村">
+        <img src="Netflix_罵倒村_cast_250430.png" alt="罵倒村" />
+        <p>罵倒村</p>
+      </div>
+      <div class="card" data-key="kuruma" data-title="ひっかかりニーチェ">
+        <img src="kuruma.png" alt="ひっかかりニーチェ" />
+        <p>ひっかかりニーチェ</p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const works = {
+      talk: {
+        title: "トークサバイバー",
+        meta: "2024年・バラエティ・PG12",
+        video: "talk.mp4",
+        description:
+          "人気芸人たちが即興トークで勝ち残りを目指すバラエティ番組。<br>お題は当日まで秘密で、台本なしだからこそ見られる“素のトーク力”が魅力です。時には冷や汗をかきながらも懸命に笑いを取りにいく姿がたまりません。<br>緊張感あふれるトークバトルの中で、思わぬ爆笑シーンが続出！個人的に超おすすめです。",
+        cast: "千鳥／劇団ひとり／おぎやはぎ／チャンス大城／永野／津田篤宏（ダイアン）／野田クリスタル（マヂカルラブリー）／野呂佳代 他",
+      },
+      golden: {
+        title: "ゴールデンコンビ",
+        meta: "2024年・バラエティ・PG12",
+        video: "golden.mp4",
+        description:
+          "普段とは違う相方と“即席コンビ”を組んで、お笑いの頂点を目指す番組。<br />相性バツグンで奇跡が起きるコンビもいれば、グダグダで逆におもしろいコンビもいたりして、展開が読めないのが最高。<br>個人的には屋敷×ホリケンコンビがおすすめ！コンビ同士で戦うはずが、ここだけコンビ内で争ってる謎の展開が面白い！",
+        cast: "千鳥／髙比良くるま（令和ロマン）／野田クリスタル（マヂカルラブリー）／せいや（霜降り明星）／秋山寛貴（ハナコ）／堀内 健（ネプチューン）／屋敷裕政（ニューヨーク） 他",
+      },
+      ariyoshi: {
+        title: "有吉の壁",
+        meta: "2024年・バラエティ・G",
+        video: "kabe.mp4",
+        description:
+          "芸人たちが、体当たりで“笑いの壁”に挑むバラエティ。<br>舞台は商業施設だったり、遊園地だったり…身近な場所が一瞬で笑いの聖地に変わるのがたまらない！<br />即興要素もあって、スベったり噛んだりする瞬間すらリアルでクセになる！",
+        cast: "有吉弘行／チョコレートプラネット／シソンヌ／ジャングルポケット／パンサー／タイムマシーン3号／ハナコ 他",
+      },
+      batoumura: {
+        title: "罵倒村",
+        meta: "2024年・バラエティ・R15+",
+        video: "batou.mp4",
+        description:
+          "ここは罵倒が飛び交う“不思議な村”――『罵倒村』は、罵倒に慣れているはずの芸人たちさえ圧倒する、村人たちからの容赦ないツッコミが飛び交う場所。<br>数々の罵倒に耐えつつも笑いを生み出す芸人たちの手腕は必見です！普段は言えない本音を、罵倒という形で思い切り爆発させる、斬新で痛快なバラエティ番組。",
+        cast: "渡部 建（アンジャッシュ）／渡辺 隆（錦鯉）／津田篤宏（ダイアン）／西野亮廣（キングコング）長谷川 忍（シソンヌ）／屋敷裕政（ニューヨーク）／高野正成（きしたかの）すがちゃん最高No.１（ぱーてぃーちゃん） 他",
+      },
+      kuruma: {
+        title: "ひっかかりニーチェ",
+        meta: "2024年・バラエティ・PG12",
+        video: "hikkakari.mp4",
+        description:
+          "視聴者から寄せられた「ちょっとひっかかること」をテーマに語り合う番組。<br>永野さんの暴走トークと、くるまさんの冷静なツッコミの絶妙なバランスがクセになる、夜中に観るのにぴったりの一作です。<br>最近では、復帰したくるまさんを思わず抱きしめてしまった永野さんの姿も。ここでは、ひねくれていない素直でかわいい永野さんの素顔が見られます！",
+        cast: "永野／髙比良くるま（令和ロマン）",
+      },
+    };
+
+    const video = document.getElementById("heroVideo");
+    const videoSource = document.getElementById("videoSource");
+    const title = document.getElementById("heroTitle");
+    const meta = document.getElementById("heroMeta");
+    const desc = document.getElementById("heroDescription");
+    const cast = document.getElementById("heroCast");
+
+    const playPauseBtn = document.getElementById("playPauseBtn");
+    const muteBtn = document.getElementById("muteBtn");
+
+    // カードクリックで動画切替＆情報更新
+    document.querySelectorAll(".card").forEach((card) => {
+      card.addEventListener("click", () => {
+        const key = card.getAttribute("data-key");
+        const data = works[key];
+        if (!data) return;
+
+        title.textContent = data.title;
+        meta.textContent = data.meta;
+        desc.innerHTML = data.description;
+        cast.textContent = data.cast || "出演者情報なし";
+        videoSource.src = data.video;
+        video.load();
+        video.play();
+
+        // 表示中の作品と同じカードは非表示に
+        document.querySelectorAll(".more .card").forEach((c) => {
+          c.style.display = c.getAttribute("data-key") === key ? "none" : "block";
+        });
+
+        // ボタンは再生中状態に切替
+        playPauseBtn.textContent = "⏸";
+      });
+    });
+
+    // ページロード時に現在タイトルのカードを非表示に
+    window.addEventListener("DOMContentLoaded", () => {
+      const heroTitle = title.textContent.trim();
+      const cards = document.querySelectorAll(".more .card");
+      cards.forEach((card) => {
+        if (card.getAttribute("data-title") === heroTitle) {
+          card.style.display = "none";
+        }
+      });
+
+      // 最初は動画再生中なので再生ボタンは「一時停止」に
+      playPauseBtn.textContent = "⏸";
+      // ミュート状態は動画の状態に合わせる
+      muteBtn.textContent = video.muted ? "🔇" : "🔈";
+    });
+
+    // 再生/一時停止ボタンの動作
+    playPauseBtn.addEventListener("click", () => {
+      if (video.paused) {
+        video.play();
+        playPauseBtn.textContent = "⏸";
+      } else {
+        video.pause();
+        playPauseBtn.textContent = "▶";
+      }
+    });
+
+    // ミュートボタンの動作
+    muteBtn.addEventListener("click", () => {
+      video.muted = !video.muted;
+      muteBtn.textContent = video.muted ? "🔇" : "🔈";
+    });
+  </script>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 MYFLIX. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>
